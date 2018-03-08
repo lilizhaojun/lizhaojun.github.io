@@ -127,7 +127,7 @@
 
 
 
-  <title>第二篇博客 | Hexo</title>
+  <title>GIT 常用命令 | Hexo</title>
   
 
 
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第二篇博客</h1>
+          <h1 class="post-title" itemprop="name headline">GIT 常用命令</h1>
         
 
         <div class="post-meta">
@@ -356,7 +356,41 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+		
+		<h1 id="GIT的常用命令总结"><a href="#GIT的常用命令总结" class="hearderlink" title="GIT的常用命令总结"></a>GIT 常用命令总结</h1><h2 id="上传与下载"><a href="#上传与下载" class="headerlink" title="上传与下载"></a>上传与下载</h2><ol>
+<li>配置身份:git config --global user.name "名字"  
+git config --global user.email "邮箱地址"</li>
+<li>上传文件:创建仓库、提交代码
+git init
+git add . 提交所有文件   git add +文件名  提交单个文件
+git commit -m "注释"  上传到服务器</li>
+<li>托管:
+1、github上新建版本库
+2、切换到要上传的工程目录下，将远程版本库克隆到本地
+git clone https://github.com/lilizhaojun/firstpro.git     (firstpro是github中创建的版本库）
+3、工程目录中多出一个同名文件夹，将该文件夹下的所有目录复制到上一层目录中（注意包括隐藏文件 .git）
+4、提交PUSH（push之前需add、commit）
+git push origin master
+下载PULL
+git pull origin master</li>
+<li>相关指令</li>
+<li>
+git init 初始化仓库
+git add filename
+git commit -m "注释" 
+git status 查询仓库当前的状态
+git diff 查询仓库当前的不同
+git log 提交的日志
+Head 当前版本  Head^上一个版本
+git reset --hard Head^ 切换到上一个版本
+git reflog 查看命令历史，前几个数字为版本号，通过git reset --hard可穿越版本</li>
+<li>
+git add xx 将xx文件添加到缓存区
+git add -A .  将所有改变的文件添加
+git add -A    添加所有内容
+git add .   添加新文件和编辑过得文件 ，不包括删除的文件
+git add -u 添加编辑或者删除过得文件，不包括新文件
+</li>
       
       
 
