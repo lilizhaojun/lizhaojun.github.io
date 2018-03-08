@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-12-03T15:13:45.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Zhaojun Li</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第四篇博客</title>
+    <link href="http://yoursite.com/2017/12/03/%E7%AC%AC%E5%9B%9B%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2017/12/03/第四篇博客/</id>
+    <published>2017-12-03T15:13:45.000Z</published>
+    <updated>2017-12-03T15:13:45.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第三篇博客</title>
+    <link href="http://yoursite.com/2017/12/03/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2017/12/03/第三篇博客/</id>
+    <published>2017-12-03T15:13:34.000Z</published>
+    <updated>2017-12-03T15:13:34.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第二篇博客</title>
+    <link href="http://yoursite.com/2017/12/03/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2017/12/03/第二篇博客/</id>
+    <published>2017-12-03T15:13:11.000Z</published>
+    <updated>2017-12-03T15:13:11.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>初始IMS</title>
+    <link href="http://yoursite.com/2017/12/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2017/12/02/我的第一篇博客/</id>
+    <published>2017-12-02T09:19:42.000Z</published>
+    <updated>2017-12-16T07:30:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="IMS的简单介绍"><a href="#IMS的简单介绍" class="headerlink" title="IMS的简单介绍"></a>IMS的简单介绍</h1><h2 id="IMS的定义"><a href="#IMS的定义" class="headerlink" title="IMS的定义"></a>IMS的定义</h2><ol><li>IMS（IP Multimedia Subsystem）是IP多媒体子系统，是一种全新的多媒体业务形式，它能够满足现在的终端客户更新颖、更多样化多媒体业务的需求。</li><li>Volte（Voice over LTE）是基于IMS的语音业务。它是一种IP数据传输技术，无需2G/3G网，全部业务承载于4G网络上，可实现数据与语音业务在同一网络下的统一。简单来讲，就是在4G网络上既能上网又能打电话。而且，提供了更高质量、更自然的语音视频通话效果。<h2 id="IMS的框架"><a href="#IMS的框架" class="headerlink" title="IMS的框架"></a>IMS的框架</h2></li><li>以下为IMS的框架图，主要分为telephony,ims以及RIL层，RIL层之间与modem层通信。具体框架各厂商之前也有所不同，其中最主要是中间的IMS层，具体介绍，网上有很多大神的详解，此处安利<a href="http://blog.csdn.net/linyongan/article/details/53350493" target="_blank" rel="noopener">Android 7.0 IMS框架详解</a><br><img src="http://img.blog.csdn.net/20161128201804494" alt=""><h2 id="SIP协议"><a href="#SIP协议" class="headerlink" title="SIP协议"></a>SIP协议</h2></li><li>由于行业相关，比较关心IMS的协议。所以主要整理了SIP协议相关的内容：<br>SIP（Session Initiation Protocol，会话初始协议）是由IETF（Internet Engineering Task Force，因特网工程任务组）制定的多媒体通信协议。SIP(Session Initiation Protocol)是一个应用层的信令控制协议。用于创建、修改和释放一个或多个参与者的会话。这些会话可以是Internet多媒体会议 、IP电话或多媒体分发。会话的参与者可以通过组播（multicast）、网状单播（unicast）或两者的混合体进行通信。</li></ol><ul><li>SIP消息基本结构：SIP一般消息 ＝  起始行 / *消息头 / CRLF（空行） /  [消息体]</li><li>起始行 ＝ 请求行/状态行 （SIP请求消息起始行是请求行（Request-Line），响应消息起始行是状态行（Status-Line））。<br>请求消息头至少包括From、To、CSeq、Call-ID、Max-Forwards、Via 六个头字段，它们是构建SIP消息基本单元<br>消息体一般采用SDP（Session Description Protocol）协议，会话描述协议。</li><li><p>SIP消息一般分为以下几类：</p><p> INVITE:发起会话请求，邀请用户加入一个会话，会话描述包含在消息体中，对于两方呼叫来说，主叫方在会话描述中指示其能够接受的媒体类型及其参数。</p><p> ACK：证实已收到对于INVITE请求的最终响应。会话中主叫方接收到被叫方回复的200（OK）最终响应后，向被叫方发送ACK消息证实主叫方已收到该最终响应，以完成由INVITE，200和ACK组成的三次握手。该消息仅和INVITE消息配套使用。</p><p> REGISTER：发起注册，注销和刷新注册请求，向注册员登记建立用户当前的IP 地址与用户的公共用户身份SIP URI之间的对应关系，为该用户身份后续请求提供服务。在用户注册时，REGISTER请求携带用户需注册的公共用户身份，用户当前的IP地址。</p><p> OPTIONS:查询另一User Agent的能力。一般用于在对话建立时查询对端的能力，以便其后的使用。</p><p> UPDATE:发起更新请求。一般用于媒体更新。</p><p> PRACK:对临时可靠性响应返回确认，证实已收到1**临时响应。常用于在会话建立时对183消息确认，进行第二次SDP提供，以对 媒体资源进行协商。</p><p> CANCEL:取消尚未完成的请求，对于已经收到最终响应的请求则没有影响。CANCEL请求仅支持取消INVITE请求。有保持会话状态能力的用户代理需要对CANCEL请求进行响应，而不是直接透传，故CANCEL请求的响应过程是一个逐跳的事务。</p><p> BYE：结束当前会话session。当接收到BYE请求时，当前对话的所在会话将会被终结。BYE请求技能在建立的对话中发送，会话的主叫方可在早起对话和最终对话发送BYE请求终结会话，被叫方仅能在最终对话中发送BYE请求终结会话。SIP更多东西请查看SIP协议的官方文档，安利<a href="https://wenku.baidu.com/view/817e15ac31126edb6e1a1011.html" target="_blank" rel="noopener">SIP协议中文版</a></p><p> &lt;注：IMS是一个庞大的知识点，涉及到的东西很广很深，此篇仅用来整理和学习&gt;</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;IMS的简单介绍&quot;&gt;&lt;a href=&quot;#IMS的简单介绍&quot; class=&quot;headerlink&quot; title=&quot;IMS的简单介绍&quot;&gt;&lt;/a&gt;IMS的简单介绍&lt;/h1&gt;&lt;h2 id=&quot;IMS的定义&quot;&gt;&lt;a href=&quot;#IMS的定义&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
